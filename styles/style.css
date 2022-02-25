@@ -19,6 +19,14 @@ h1, h2 {
 
 /* Header */
 
+.header {  
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.13), 0 6px 6px rgba(0,0,0,0.13);
+}
+
 .header__imagen--logo {
   width: 20%;
 }
@@ -628,3 +636,6 @@ h1, h2 {
 .navbar-toggler:focus {  
   box-shadow: 0 0 0 0;
 }
+
+
+
