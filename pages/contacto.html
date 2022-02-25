@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="./img/favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../styles/style.css">
   <title>Eventnow</title>
 </head>
@@ -13,22 +15,27 @@
 <body>
   <header class="header">
 
-    <div class="header__imagen">
-      <img class="header__imagen--logo" src="../img/logo2b.gif" alt="Logo">
-    </div>
+      <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container-fluid">
+          <img class="header__imagen--logo" src="../img/logo2b.gif" alt="Logo" />
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse fixNav" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link navegador__lista--item" aria-current="page" href="../index.html">Inicio</a>
+              <a class="nav-link navegador__lista--item" href="eventos.html">Eventos</a>
+              <a class="nav-link navegador__lista--item" href="micuenta.html">Mi Cuenta</a>
+              <a class="nav-link navegador__lista--item" href="mistickets.html">Mis Tickets</a>
+              <a class="nav-link navegador__lista--item" href="#">Contacto</a>
+            </div>
+          </div>
+        </div>
+      </nav>
 
-    <nav class="navegador">
-      <!-- Nota: Enlaces Relativos -->
-      <ul class="navegador__listas">
-        <li class="navegador__lista"><a class="navegador__lista--item" href="../index.html">Inicio</a></li>
-        <li class="navegador__lista"><a class="navegador__lista--item" href="eventos.html">Eventos</a></li>
-        <li class="navegador__lista"><a class="navegador__lista--item" href="micuenta.html">Mi Cuenta</a></li>
-        <li class="navegador__lista"><a class="navegador__lista--item" href="mistickets.html">Mis Tickets</a></li>
-        <li class="navegador__lista"><a class="navegador__lista--item" href="#">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-  <h2>Contacto</h2>
+    </header>
+  <h2 class="mt-5 fw-bolder text-uppercase xs mb-5">Contacto</h2>
   <div class="form__container">
     
     <section>     
@@ -78,34 +85,68 @@
 
   </div>
   <footer class="footer" id="pie">
-
     <h3 class="footer__titulo">Secciones</h3>
 
     <!-- Nota: Lista No Ordenadas -->
     <ul class="footer__listas">
-      <li class="footer__lista"><a class="footer__lista--item" href="../index.html">Inicio</a></li>
-      <li class="footer__lista"><a class="footer__lista--item" href="eventos.html">Eventos</a></li>
-      <li class="footer__lista"><a class="footer__lista--item" href="micuenta.html">Mi Cuenta</a></li>
-      <li class="footer__lista"><a class="footer__lista--item" href="mistickets.html">Mis Tickets</a></li>
-      <li class="footer__lista"><a class="footer__lista--item" href="#">Contacto</a></li>
+      <li class="footer__lista">
+        <a class="footer__lista--item" href="../index.html">Inicio</a>
+      </li>
+      <li class="footer__lista">
+        <a class="footer__lista--item" href="eventos.html">Eventos</a>
+      </li>
+      <li class="footer__lista">
+        <a class="footer__lista--item" href="micuenta.html"
+          >Mi Cuenta</a
+        >
+      </li>
+      <li class="footer__lista">
+        <a class="footer__lista--item" href="mistickets.html"
+          >Mis Tickets</a
+        >
+      </li>
+      <li class="footer__lista">
+        <a class="footer__lista--item" href="#"
+          >Contacto</a
+        >
+      </li>
     </ul>
 
     <ul class="footer__listas2">
-      <li class="foooter__listas2"><a class="footer__listas2--item" href="#">Trabajá con Nosotros</a></li>
-      <li class="foooter__listas2"><a class="footer__listas2--item" href="#">Terminos de Uso</a></li>
+      <li class="foooter__listas2">
+        <a class="footer__listas2--item" href="#">Trabajá con Nosotros</a>
+      </li>
+      <li class="foooter__listas2">
+        <a class="footer__listas2--item" href="#">Terminos de Uso</a>
+      </li>
     </ul>
 
     <!-- Nota: Lista Ordenadas -->
     <ol class="footer__redesListas">
-      <li class="footer__redesListas"><a class="footer__redesListas--item" href="">Facebook</a></li>
-      <li class="footer__redesListas"><a class="footer__redesListas--item" href="">Instagram</a></li>
-      <li class="footer__redesListas"><a class="footer__redesListas--item" href="">Twitter</a></li>
-      <li class="footer__redesListas"><a class="footer__redesListas--item" href="">Whatsapp</a></li>
+      <li class="footer__redesListas">
+        <i class="fa-brands fa-facebook"></i>
+        <a class="footer__redesListas--item" href="">Facebook</a>
+      </li>
+      <li class="footer__redesListas">
+        <i class="fa-brands fa-instagram"></i>
+        <a class="footer__redesListas--item" href="">Instagram</a>
+      </li>
+      <li class="footer__redesListas">
+        <i class="fa-brands fa-twitter"></i>
+        <a class="footer__redesListas--item" href="">Twitter</a>
+      </li>
+      <li class="footer__redesListas">
+        <i class="fa-brands fa-whatsapp"></i>
+        <a class="footer__redesListas--item" href="">Whatsapp</a>
+      </li>
     </ol>
 
     <!-- Nota: Enlace Absoluto -->
-    <a class="footer__copyright" href="https://www.google.com.ar/">Copyright © 2022. Todos los derechos reservados</a>
+    <a class="footer__copyright" href="https://www.google.com.ar/"
+      >Copyright © 2022. Todos los derechos reservados</a
+    >
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>
