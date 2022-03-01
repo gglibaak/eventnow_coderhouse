@@ -45,7 +45,7 @@ h1, h2 {
   text-decoration: none;
   margin-left: 10px;
   color: black;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   transition: all 0.2s ease;
   display: flex;
@@ -255,7 +255,7 @@ h1, h2 {
 
 /* Footer */
 
-.footer {
+.footer__nonBootstrap {
   display: flex;
   justify-content:space-between;
   background-color: rgb(230, 230, 230);
@@ -263,6 +263,7 @@ h1, h2 {
   width: 100%;
   height: auto;
   margin-top: 20px;
+  padding-top: 20px;
   
 }
 
@@ -338,6 +339,8 @@ h1, h2 {
   text-transform: uppercase;
   font-weight: bold;
   background:#fff;
+  width: auto;
+  
 }
 
 .form__container--textarea {
@@ -430,83 +433,7 @@ h1, h2 {
 
 
 
-/* Mobile Screen */
-@media only screen and (max-width: 480px) {
-    
-  .eventos {
-    width: 50%;
-    max-width: 1000px;
-    margin: 10px auto;
-    display: grid;
-    
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(auto, auto);
-  }
 
-  .header__imagen {   
-    height: 100%;
-    width: 100%;
-  }
-
-  .header__imagen--logo {   
-    width: 55%;;
-  }
-
-  .linkFootersection {
-    text-align: center;
-    font-size: 10px;
-    display: none;
-    
-  }
-  
-  .navegador {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .navegador__listas {
-    display: flex;
-    flex-direction: column;
-    text-align: center;    
-  }
-
-  .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer__titulo {
-    font-size: 30px;
-  }
-  .footer__listas,
-  .footer__listas2,
-  .footer__redesListas {
-    text-align: center;
-  }
-  .footer__copyright {
-    margin: 20px;
-    position: relative;
-    
-  }
-  .footer__redesListas--item {
-    margin-left: 5 px;
-  }
-
-  /* Support Page mobile*/
-
-  .form__container {
-    display: flex;
-    flex-direction: column;           
-  }
-
-  .form__container--btn {
-    display: flex;
-    flex-direction: column;
-  }   
-   
-}
 
 /* Under Construction */
 
@@ -637,5 +564,324 @@ h1, h2 {
   box-shadow: 0 0 0 0;
 }
 
+/* Ticket's page / Account's page */
+.account,
+.tickets {
+  /* background-color: #33ccff; */
+  height: auto;
+  width: 100%;
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 10px;
+}
 
+.account__border,
+.tickets__border {
+  height: 10px;
+  width: 100%;
+  background-color: #000000;  
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.055), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.account__border2,
+.tickets__border2 {
+  
+  height: 10px;
+  width: 100%;
+  background-color: #000000;
+  margin-top: 30px;
+  bottom: 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.tickets__info {
+  padding: 20px 10px;
+  display: flex;  
+  justify-content: space-around;
+ 
+}
+
+.ticetks__eventTitle,
+.ticetks__operationNumb,
+.ticetks__eventDate,
+.ticetks__eventPlace,
+.ticetks__ticketQuantity {
+  text-transform: capitalize;
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+.ticketsInfo {
+  font-weight: 300;
+}
+
+.tickets__code {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content:space-evenly;
+}
+
+.tickets__code--ticket1 {
+  background-image: url("../img/tickets/qr_1.png");
+  /* background-color: tomato; */
+}
+
+.tickets__code--ticket2 {
+  background-image: url("../img/tickets/qr_2.png");
+  /* background-color: turquoise; */
+}
+
+.tickets__code--place1, 
+.tickets__code--place2 {
+  height: 250px;
+  width: 250px;
+} 
+
+.tickets__code--ticket1,
+.tickets__code--ticket2 {  
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tickets__code--codeNumb {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.section__eventBtn {
+  padding-left: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  margin: 60px;
+}
+
+.section__eventBtn--btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #ffff;
+  color: #000000;
+  padding: 15px 60px;
+  border: 3px solid #000000;
+  transition: all 0.2s;
+}
+
+.section__eventBtn--btn:hover {  
+  background-color: #000000;
+  color: #ffff;
+}
+
+/* Account's Page */
+
+.account__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(auto, auto);
+
+}
+.account__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.account__info--avatar {
+  background-image: url("../img/img_avatar.png");
+  height: 250px;
+  width: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: circle();
+  transition: all 0.2s ease;  
+}
+
+.account__info--avatar:hover {
+  cursor: pointer;
+}
+
+.account__info--changeAvatar {
+  text-transform: capitalize;
+  color: #000000;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.account__info--changeAvatar:hover {
+color:#33ccff;
+}
+
+.account__options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+.account__list {
+  margin: 30px 0;
+  list-style: none;
+}
+
+.account__list--editAcc,
+.account__list--tickets,
+.account__list--changePsw,
+.account__list--exitAcc {
+  text-decoration: none;
+  margin: 0 5px;
+  text-transform: capitalize;
+  color: #000000;
+  transition: all 0.2s ease;
+  
+}
+
+.account__list--editAcc:hover,
+.account__list--tickets:hover,
+.account__list--changePsw:hover,
+.account__list--exitAcc:hover {
+  color: #33ccff;
+}
+
+.account__note {
+  text-align: center;
+}
+
+.account__note--txt {
+  font-size: 14px;
+}
+
+
+
+
+
+/* Mobile Screen */
+@media only screen and (max-width: 480px) {
+    
+  .eventos {
+    width: 50%;
+    max-width: 1000px;
+    margin: 10px auto;
+    display: grid;
+    
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto, auto);
+  }
+
+  .header__imagen {   
+    height: 100%;
+    width: 100%;
+  }
+
+  .header__imagen--logo {   
+    width: 55%;;
+  }
+
+  .linkFootersection {
+    text-align: center;
+    font-size: 10px;
+    display: none;
+    
+  }
+  
+  .navegador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navegador__listas {
+    display: flex;
+    flex-direction: column;
+    text-align: center;    
+  }
+
+  .footer__nonBootstrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .footer__titulo {
+    font-size: 30px;
+  }
+  .footer__listas,
+  .footer__listas2,
+  .footer__redesListas {
+    text-align: center;
+  }
+  .footer__copyright {
+    margin: 20px;
+    position: relative;
+    
+  }
+  .footer__redesListas--item {
+    margin-left: 5px;
+  }
+
+  /* Support Page mobile*/
+
+  .form__container {
+    display: flex;
+    flex-direction: column;           
+  }
+
+  .form__container--btn {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Mobile Screen ticket page*/
+  .tickets__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tickets__code {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    
+  }
+  
+  .tickets__code--place1,
+  .tickets__code--place2 {
+    display: flex;
+    flex-direction: column;
+    height: 310px;
+    width: 300px;
+  }
+  .tickets__code--ticket1,
+  .tickets__code--ticket2 {  
+    height: 90%;
+    width: 90%;
+    margin-left: 20px;
+  }
+
+  .account__border2,
+  .tickets__border2 {
+    margin-top: 0;
+  }
+  /* Account's Page Mobile */
+  .account__container {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto, auto);  
+  }
+  .account__info--changeAvatar {
+    padding: 20px;
+  }
+
+  .account__note {
+    margin: 0;
+  }
+
+     
+}
+  
 
