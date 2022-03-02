@@ -256,15 +256,59 @@ h1, h2 {
 /* Footer */
 
 .footer__nonBootstrap {
-  display: flex;
-  justify-content:space-between;
   background-color: rgb(230, 230, 230);
-  position: absolute;
   width: 100%;
   height: auto;
-  margin-top: 20px;
-  padding-top: 20px;
-  
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, auto);
+  font-size: 15px;
+}
+
+
+.footer__grid1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer__grid2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.footer__gridSub {
+  grid-column-start: 5;
+  grid-column-end: -1;
+}
+
+.footer__gridSub {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 30px 0;
+}
+
+.footer__gridSub--title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.footer__grid4 {
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  padding: 10px;
+}
+
+.footer__titulo {
+  margin: 20px 0 0 15px;
+  font-size: 18px;  
 }
 
 .footer__listas,
@@ -287,10 +331,8 @@ h1, h2 {
 .footer__copyright {
   width: 100%;
   bottom: 0;
-  text-align: center;
   text-decoration: none;
-  font-size: small;
-  position: absolute;
+  font-size: small;  
   
 }
 
@@ -431,10 +473,6 @@ h1, h2 {
   outline: none;
 }
 
-
-
-
-
 /* Under Construction */
 
 .under__construction {
@@ -566,8 +604,7 @@ h1, h2 {
 
 /* Ticket's page / Account's page */
 .account,
-.tickets {
-  /* background-color: #33ccff; */
+.tickets {  
   height: auto;
   width: 100%;
   max-width: 960px;
@@ -584,8 +621,7 @@ h1, h2 {
 }
 
 .account__border2,
-.tickets__border2 {
-  
+.tickets__border2 {  
   height: 10px;
   width: 100%;
   background-color: #000000;
@@ -754,9 +790,6 @@ color:#33ccff;
 }
 
 
-
-
-
 /* Mobile Screen */
 @media only screen and (max-width: 480px) {
     
@@ -805,19 +838,21 @@ color:#33ccff;
     padding-top: 20px;
   }
 
-  .footer__titulo {
-    font-size: 30px;
+  .footer__gridSub--title {
+    font-weight: bold;
+    text-align: center;
   }
+
   .footer__listas,
   .footer__listas2,
   .footer__redesListas {
     text-align: center;
   }
   .footer__copyright {
-    margin: 20px;
-    position: relative;
-    
+    margin: 20px auto;
+    font-size: xx-small;    
   }
+
   .footer__redesListas--item {
     margin-left: 5px;
   }
@@ -878,7 +913,8 @@ color:#33ccff;
   }
 
   .account__note {
-    margin: 0;
+    margin: 0 20px;
+    
   }
 
      
