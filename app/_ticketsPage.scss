@@ -1,0 +1,87 @@
+/* Account's Page with Nesting*/
+// Variables 
+$border-color: #000000;
+$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.055), 0 6px 6px rgba(0,0,0,0.23);
+
+.tickets {
+    
+    height: auto;
+    width: 100%;
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 10px;
+
+        &__border {
+            height: 10px;
+            width: 100%;
+            background-color: $border-color;  
+            box-shadow: $box-shadow;
+        }
+        
+        &__border2 {  
+            height: 10px;
+            width: 100%;
+            background-color: $border-color;
+            margin-top: 30px;
+            bottom: 0;
+            box-shadow: $box-shadow;
+        }
+        &__info {
+            padding: 20px 10px;
+            display: flex;  
+            justify-content: space-around;
+
+                &--eventTitle,
+                &--operationNumb,
+                &--eventDate,
+                &--eventPlace,
+                &--ticketQuantity {
+                    text-transform: capitalize;
+                    margin: 0 10px;
+                    font-weight: 500;
+                }
+
+                &--ticketsData {
+                    font-weight: 300;
+                }
+        
+        }
+        
+        &__code {
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content:space-evenly;
+
+                &--place1 {
+                    height: 250px;
+                    width: 250px;
+                        .tickets__code--ticket1 {
+                            height: 100%;
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-image: url("../img/tickets/qr_1.png");
+                        }
+                        .tickets__code--codeNumb {
+                            text-align: center;
+                            text-transform: capitalize;
+                        }
+                } 
+                &--place2 {
+                    height: 250px;
+                    width: 250px;
+                        .tickets__code--ticket2 {
+                            height: 100%;
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-image: url("../img/tickets/qr_2.png");
+                        }
+                        .tickets__code--codeNumb {
+                            text-align: center;
+                            text-transform: capitalize;
+                        }
+                }
+        } 
+    }
