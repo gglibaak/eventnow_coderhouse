@@ -9,7 +9,7 @@
 }
 
 .header__imagen--logo {
-  width: 20%;
+  width: 60%;
 }
 
 .navegador {
@@ -48,6 +48,7 @@
   font-size: smaller;
   text-decoration: none;
 }
+
 
 .eventos {
   display: flex;
@@ -292,6 +293,8 @@
   font-size: 18px;  
 }
 
+
+
 .footer__listas,
 .footer__listas2,
 .footer__redesListas,
@@ -307,6 +310,24 @@
 .footer__lista--item {
   text-decoration: none;
   color: #000000;
+  transition: all 0.2s;
+    &:hover {
+      color: #33ccff;
+    }
+}
+/* SASS Maps*/
+$socialmedia: (
+    facebook: rgb(38, 38, 255),
+    instagram: rgb(185, 97, 226),
+    twitter: rgb(59, 187, 247),
+    whatsapp: rgb(111, 226, 111)
+
+);
+
+@each $smedia, $color in $socialmedia {
+  .fa-#{$smedia}:hover {
+    color: $color;
+  }
 }
 
 .footer__copyright {
@@ -617,20 +638,7 @@
   margin: 60px;
 }
 
-.section__eventBtn--btn {
-  text-decoration: none;
-  text-transform: uppercase;
-  background-color: #ffff;
-  color: #000000;
-  padding: 15px 60px;
-  border: 3px solid #000000;
-  transition: all 0.2s;
-}
 
-.section__eventBtn--btn:hover {  
-  background-color: #000000;
-  color: #ffff;
-}
 
 .account__container {
   display: grid;
@@ -708,135 +716,180 @@
 
 .account__note--txt {
   font-size: 14px;
+  padding-bottom: 30px;
 }
 
-/* Mobile Screen */
-@media only screen and (max-width: 480px) {
-    
-  .eventos {
-    width: 50%;
-    max-width: 1000px;
-    margin: 10px auto;
-    display: grid;
-    
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(auto, auto);
-  }
+//  Event's Page
 
-  .header__imagen {   
-    height: 100%;
-    width: 100%;
-  }
-
-  .header__imagen--logo {   
-    width: 55%;;
-  }
-
-  .linkFootersection {
-    text-align: center;
-    font-size: 10px;
-    display: none;
-    
-  }
-  
-  .navegador {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .navegador__listas {
-    display: flex;
-    flex-direction: column;
-    text-align: center;    
-  }
-
-  .footer__nonBootstrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-  }
-
-  .footer__gridSub--title {
-    font-weight: bold;
-    text-align: center;
-  }
-
-  .footer__listas,
-  .footer__listas2,
-  .footer__redesListas {
-    text-align: center;
-  }
-  .footer__copyright {
-    margin: 20px auto;
-    font-size: xx-small;    
-  }
-
-  .footer__redesListas--item {
-    margin-left: 5px;
-  }
-
-  /* Support Page mobile*/
-
-  .form__container {
-    display: flex;
-    flex-direction: column;           
-  }
-
-  .form__container--btn {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Mobile Screen ticket page*/
-  .tickets__info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .tickets__code {
-    display: flex;
-    flex-direction: column;    
-    align-items: center;
-    
-  }
-  
-  .tickets__code--place1,
-  .tickets__code--place2 {
-    display: flex;
-    flex-direction: column;
-    height: 310px;
-    width: 300px;
-  }
-  .tickets__code--ticket1,
-  .tickets__code--ticket2 {  
-    height: 90%;
-    width: 90%;
-    margin-left: 20px;
-  }
-
-  .account__border2,
-  .tickets__border2 {
-    margin-top: 0;
-  }
-  /* Account's Page Mobile */
-  .account__container {
-    padding: 50px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(auto, auto);  
-  }
-  .account__info--changeAvatar {
-    padding: 20px;
-  }
-
-  .account__note {
-    margin: 0 20px;
-    
-  }
-     
+.eventContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
 }
+
+.calendar {
+  width: 300px;
+  margin: auto; 
+  box-shadow: 0 10px 20px rgba(0,0,0,0.13), 0 6px 6px rgba(0,0,0,0.13);
+}
+
+.calendar__container {
+  background-color: #33ccff;
+  border-radius: 4px;
+}
+
+.calendar__container--section {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.calendar__container--iconLeft {
+  font-size: 16px;
+  font-weight: bolder;
+  text-align: center;
+  padding-top: 15px;
+  color: #f6f6f6;
+  transition: all 0.2s;
+}
+/* SASS Extend*/
+.calendar__container--iconRight {
+  @extend .calendar__container--iconLeft;
+}
+.calendar__container--title {
+  @extend .calendar__container--iconLeft;
+}
+
+.calendar__container--iconLeft:hover,
+.calendar__container--iconRight:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* SASS Mixin*/
+@mixin space($padding, $margin) {
+    padding: $padding;
+    margin:  $margin;
+}
+
+.calendar__container--calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  @include space(0, 0);
+  list-style: none;
+  background-color: #f6f6f6;
+  padding: 5px;
+}
+
+.calendar__container--day {
+  font-size: 14px;
+  justify-self: center;
+  transition: all 0.2s;
+}
+
+.calendar__container--day:hover {
+  color: #33ccff;
+  cursor: pointer;  
+}
+
+.calendar__container--dayName {
+  font-weight: bold;
+}
+
+.calendar__container--firstDay {
+  grid-column-start: 7;
+}
+
+.searchEvent {
+  display: flex;
+  align-items: center;
+}
+
+.searchEvent__icon {
+  margin-right: 15px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.searchEvent__icon:hover {
+  color: #33ccff;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column-start: span 3;
+  grid-row-start: 2;
+  padding: 10px 0;
+}
+
+.searchEvent__input {
+  width:100%;
+  height: 30px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:8px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+  font-size: 13px;  
+}
+
+.filters__lista {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+.filters__lista-items {
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.filters__lista-items:hover {
+  color: #33ccff;
+}
+
+.filters__icon {
+  margin-right: 15px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.filters__icon:hover {
+  color: #33ccff;
+}
+
+.borderEventPage {
+  width: 100%;
+  height: 50px;
+  padding-top: 20px;
+  background-color: transparent;
+}
+
+.borderEventPage__line {
+  height: 10px;
+  width: 90%;
+  margin: auto;
+  background-color: #000000;  
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.055), 0 6px 6px rgba(0,0,0,0.23);
   
+}
+
+.eventCards {
+  width:75%;  
+  margin: 40px auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+}
+
+
+
 
