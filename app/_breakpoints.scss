@@ -1,6 +1,69 @@
+/* Tablet Screen */
+@media only screen and (max-width: 810px) {
+ 
+  /* Index's Page*/
+  .eventos {
+    width: 50%;
+    max-width: 1000px;
+    margin: 10px auto;
+    display: grid;
+    
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto, auto);
+  }
+  /* Event's Page*/
+  .eventContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, auto);
+  }
+  .calendar {
+     grid-column-start: 2;
+     grid-row-start: 1;
+  }
+
+  .searchEvent {
+     padding-top: 30px;
+     width: 100%;
+     margin: 0 auto;
+     grid-column-start: 2;
+     grid-row-start: 2;
+   }
+
+  .filters {
+     display: flex;
+     text-align: center;
+     padding-top: 30px;
+     grid-column-start: span 3;
+     grid-row-start: 3;
+     align-items: center;
+     justify-content: center;
+     margin: 0 10px;
+   }
+
+   .eventCards {
+    margin: 10px auto;
+    display: grid;
+    
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto, auto);
+  }
+
+  /* Footer */
+  .footer__listas,
+  .footer__listas2,
+  .footer__redesListas,
+  .footer__copyright {
+    padding: 0;
+  }
+
+
+
+}
 /* Mobile Screen */
 @media only screen and (max-width: 480px) {
-    
+
+
     .eventos {
       width: 50%;
       max-width: 1000px;
