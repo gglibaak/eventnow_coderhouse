@@ -342,7 +342,7 @@ $socialmedia: (
 .form__container {
   width: 90%;
   max-width: 1000px;
-  margin: 20px auto;
+  margin: 60px auto;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(2, 1fr);    
@@ -658,6 +658,7 @@ $socialmedia: (
   background-image: url("../img/img_avatar.png");
   height: 250px;
   width: 250px;
+  margin: 20px auto;
   background-repeat: no-repeat;
   background-size: cover;
   clip-path: circle();
